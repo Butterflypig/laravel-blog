@@ -48,6 +48,7 @@ textarea {
 }
 
 /* ################################# aside ################################### */
+
 .icon{
     width: 1.2em;
     height: 1.2em;
@@ -122,19 +123,26 @@ textarea {
 .menuList{
     padding: 50px 0;
 }
-.menuList>div{
+.menuList>a{
+    text-align: left;
     padding: 10px 0;
     transition: all .3s ease-in-out;
     padding-left: 20px;
 }
-.menuList>div:hover{
+.menuList>a:hover{
     background-color: #F1f2f4;
 }
 .menuList a{
+    display: block;
+    width: 250px;
+    height: 41px;
     color: #333;
     font-size: 16px;
+}
+.menuList>a span{
     margin-left: 20px;
 }
+
 
 /* ###################################### index ##################################### */
 .my-section{
@@ -168,84 +176,11 @@ textarea {
     background-color: #800000;
 }
 
-/*###################### about ##############################*/
-.icon{
-    color: rgb(69, 182, 144);
-    font-size: 1.5em;
-    vertical-align: middle;
-    margin-right: 15px;
-}
-
-.header{
+/*###################### 小说爬虫 ##############################*/
+.novel-content{
     text-align: left;
-    color: white;
-    height: 300px;
-    width: 100%;
+    padding: 40px 30px;
     background-color: rgb(69, 182, 144);
-}
-.header>h2{
-    margin-top: 100px;
-}
-
-.header>h2,.header>div{
-    margin-left: 70%;
-}
-.aboutMe{
-    padding: 30px;
-    text-align: left;
-}
-.aboutMe>h3>span:first-child{
-    color: rgb(69, 182, 144);
-    margin-right: 30px;
-}
-.aboutMe>h3>span:last-child,.aboutMe>div{
-    font-size: 14px;
-    color: #999;
-}
-
-.aboutMe>div{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.content>div{
-    width: 40%;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.workExperienceContent>div{
-    margin: 20px 0;
-}
-
-.workExperienceContent span:first-child{
-    border-right: 1px solid #999;
-    padding-right: 20px;
-    font-size: 16px;
-    color: #333;
-}
-.workExperienceContent span:nth-child(2){
-    padding: 0 20px;
-}
-.workExperienceContent span:last-child{
-    border-left: 1px solid #999;
-    padding-left: 20px;
-    font-size: 16px;
-    color: #999;
-}
-.skillsContent>ul{
-    margin: 20px 0;
-}
-.skillsContent li{
-    margin-top: 5px;
-}
-
-main{
-    background-color: #fff;
-}
-
-.line{
-    width: 100%;
-    height: 1px;
-    background-color: rgba(211, 211, 211, .3);
+    color: white;
+    font-size: 24px;
 }

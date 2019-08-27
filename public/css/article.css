@@ -1,0 +1,58 @@
+/* 图标样式 */
+.icon {
+    color: #333;
+  }
+.article{
+    text-align: left;
+}
+  .article>article:first-child{
+     margin-top: 0;
+  }
+  .article>article{
+
+      margin-top: 20px;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 30px;
+      box-shadow: 0 3px 3px rgba(128, 128, 128, .3);
+  }
+  .article h3{
+      display: inline-block;
+      margin-right: 30px;
+  }
+  .article p{
+      text-indent: 2em;
+  }
+  .article p,.article footer{
+      margin-top: 30px;
+  }
+  .article footer{
+      display: flex;
+      flex-flow: row-reverse nowrap;
+
+  }
+  .article footer>div{
+      margin-left: 15px;
+      padding-left: 15px;
+      border-left: 1px solid gray;
+  }
+  .article footer>div:last-child{
+      border-left: none;
+  }
+
+  .more{
+      text-align: center;
+    margin-top: 30px;
+  }
+
+  .more .icon{
+    color: rgba(128, 128, 128, .3);
+  }
+
+  .line{
+    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, .3);
+    position: relative;
+  }

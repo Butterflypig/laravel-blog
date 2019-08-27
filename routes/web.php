@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/test2', 'ShowProfile@getInitData');
 Route::get('/index', 'ShowProfile@index');
 Route::get('/about', 'ShowProfile@about');
+Route::get('/article', 'ShowProfile@article');
+Route::get('/share', 'ShowProfile@share');
+Route::get('/novel', 'ShowProfile@novel');
 

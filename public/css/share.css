@@ -1,0 +1,35 @@
+
+.share{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  .share>div{
+    margin-top: 30px;
+    width: 30%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 3px 3px #f1f1f1;
+    cursor: pointer;
+    transition: all linear .5s;
+  }
+  .share>div>div{
+    height: 100px;
+    overflow: hidden;
+  }
+  .share>div>div>img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .share h5{
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    padding: 5px 0;
+  }
+  .share>div:hover{
+    transform: translateY(-20px);
+  }

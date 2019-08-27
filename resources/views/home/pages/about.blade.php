@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css')}}/home.css">
+    <link rel="stylesheet" href="{{asset('css')}}/about.css">
+    <title>Document</title>
+</head>
+<body>
+
 @extends('home/home')
 
 @section('about')
@@ -19,25 +31,25 @@
             </h3>
             <div class="content">
                 <div>
-                    <svg class="icon" aria-hidden="true">
+                    <svg class="icon aboutAcon" aria-hidden="true">
                         <use xlink:href="#icon-dianhua"></use>
                     </svg>
                     <span>173-6487-1109</span>
                 </div>
                 <div>
-                    <svg class="icon" aria-hidden="true">
+                    <svg class="icon aboutAcon" aria-hidden="true">
                         <use xlink:href="#icon-qq"></use>
                     </svg>
                     <span>346519079</span>
                 </div>
                 <div>
-                    <svg class="icon" aria-hidden="true">
+                    <svg class="icon aboutAcon" aria-hidden="true">
                         <use xlink:href="#icon-weixin"></use>
                     </svg>
                     <span>Butterfly-1995lj</span>
                 </div>
                 <div>
-                    <svg class="icon" aria-hidden="true">
+                    <svg class="icon aboutAcon" aria-hidden="true">
                         <use xlink:href="#icon-tubiao209"></use>
                     </svg>
                     <span>346519079@qq.com</span>
@@ -82,7 +94,7 @@
             </h3>
             <div class="skillsContent">
                 <ul>
-    {{--                <li v-for="item in workingAbility" :key="item.id">{{item.skill}}</li>--}}
+    <!-- {{--                <li v-for="item in workingAbility" :key="item.id">{{item.skill}}</li>--}} -->
                 </ul>
             </div>
         </section>
@@ -103,3 +115,6 @@
         </section>
     </div>
 @endsection
+
+</body>
+</html>
