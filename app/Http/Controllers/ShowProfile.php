@@ -1,20 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use DB; //连接数据库
 use Illuminate\Http\Request;
 
 //引入模型
 use App\Models\Setting;
+use App\Models\Article;
+
+use Illuminate\Support\Facades\Input;
 
 class ShowProfile extends Controller
 {
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     //* @param  \Illuminate\Http\Request  $request
+     //* @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
     {
@@ -68,7 +69,7 @@ class ShowProfile extends Controller
 
     //显示关于
     public function about() {
-        $dataAbout = DB::select("select * from setting");
+        $dataAbout = Setting::get();
         $menuList = [
             [
                 'id' => 1,
@@ -106,7 +107,7 @@ class ShowProfile extends Controller
 
     //显示文集
     public function article() {
-        $article = DB::select("select * from article");
+        $article = Article::all();
         $menuList = [
             [
                 'id' => 1,
@@ -179,7 +180,7 @@ class ShowProfile extends Controller
         return view('home/pages/novel',compact('menuList'));
     }
 
-    //小说爬虫
+    //显示分享
     public function share() {
         $menuList = [
             [
@@ -252,5 +253,31 @@ class ShowProfile extends Controller
             ]
         ];
         return view('home/pages/share',compact('menuList','share'));
+    }
+
+    //文件上传
+    public function fileUpload ( Request $request ) {
+        if ( Input::method() == 'POST' ){
+            if ( $request-> hasFile('photo') && $request-> file('photo')-> isValid() ){
+                $suffix = $request->file('photo')->getClientOriginalExtension();
+                $result = $request->file('photo')->move('./images',md5(time() . rand( 100000,999999 )) . '.' .$suffix );
+
+                dd($result);
+
+                //获取文件名
+                //dd($request->file('photo')->getClientOriginalName());
+
+                //获取文件大小
+                //dd($request->file('photo')->getClientSize());
+
+                //获取文件后缀
+                //dd($request->file('photo')->getClientOriginalExtension());
+
+            }else{
+                return false;
+            }
+        }else{
+            return view('home/pages/upload');
+        }
     }
 }
