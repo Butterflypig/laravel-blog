@@ -11,16 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'ShowProfile@index');
 Route::get('/test2', 'ShowProfile@getInitData');
 Route::get('/index', 'ShowProfile@index');
 Route::get('/about', 'ShowProfile@about');
 Route::get('/article', 'ShowProfile@article');
 Route::get('/share', 'ShowProfile@share');
-Route::get('/novel', 'ShowProfile@novel');
-
+//Route::get('/novel', 'ShowProfile@novel');
 //表单
 Route::any('/file', 'ShowProfile@fileUpload');
 

@@ -55,12 +55,6 @@ class ShowProfile extends Controller
                 'name'=> '关于',
                 'iconName' => '#icon-account',
                 'routePath' => 'http://www.blog.php/about'
-            ],
-            [
-                'id' => 5,
-                'name'=> '小说',
-                'iconName' => '#icon-account',
-                'routePath' => 'http://www.blog.php/novel'
             ]
         ];
 
@@ -69,7 +63,7 @@ class ShowProfile extends Controller
 
     //显示关于
     public function about() {
-        $dataAbout = Setting::get();
+        $dataAbout = Setting::query()->get();
         $menuList = [
             [
                 'id' => 1,
@@ -94,12 +88,6 @@ class ShowProfile extends Controller
                 'name'=> '关于',
                 'iconName' => '#icon-account',
                 'routePath' => 'http://www.blog.php/about'
-            ],
-            [
-                'id' => 5,
-                'name'=> '小说',
-                'iconName' => '#icon-account',
-                'routePath' => 'http://www.blog.php/novel'
             ]
         ];
         return view('home/pages/about',compact('menuList','dataAbout'));
@@ -132,12 +120,6 @@ class ShowProfile extends Controller
                 'name'=> '关于',
                 'iconName' => '#icon-account',
                 'routePath' => 'http://www.blog.php/about'
-            ],
-            [
-                'id' => 5,
-                'name'=> '小说',
-                'iconName' => '#icon-account',
-                'routePath' => 'http://www.blog.php/novel'
             ]
         ];
         return view('home/pages/article',compact('menuList','article'));
@@ -206,12 +188,6 @@ class ShowProfile extends Controller
                 'name'=> '关于',
                 'iconName' => '#icon-account',
                 'routePath' => 'http://www.blog.php/about'
-            ],
-            [
-                'id' => 5,
-                'name'=> '小说',
-                'iconName' => '#icon-account',
-                'routePath' => 'http://www.blog.php/novel'
             ]
         ];
 

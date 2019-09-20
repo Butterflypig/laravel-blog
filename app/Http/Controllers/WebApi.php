@@ -24,14 +24,14 @@ class WebApi extends Controller
     //获取文集数据
     public function getArticleData()
     {
-        $article = Article::where('type','text')->get();
+        $article = Article::query()->where('type', 'text')->get();
         return $article;
     }
 
     //获取分享数据
     public function getShareData()
     {
-        $Share = Article::where('type','share')->get();
+        $Share = Article::query()->where('type', 'share')->get();
         return $Share;
     }
 
@@ -41,4 +41,11 @@ class WebApi extends Controller
         $setting = Setting::query()->findOrFail(1)->toArray();
         return $setting;
     }
+
+    public function getLoginData()
+    {
+        $setting = Setting::query()->findOrFail(1)->toArray();
+        return $setting;
+    }
+
 }

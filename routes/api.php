@@ -17,10 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//数据接口
-Route::get('/api/getArticleData', 'WebApi@getArticleData');
-Route::get('/api/about', 'WebApi@about');
-Route::get('/api/article', 'WebApi@article');
-Route::get('/api/share', 'WebApi@share');
-Route::get('/api/novel', 'WebApi@novel');
-
+//前台数据接口
+//Route::get('/api/getMenuData', 'WebApi@getMenuData'); //获取菜单信息
+//Route::get('/api/getArticleData', 'WebApi@getArticleData'); //获取文章数据
+//Route::get('/api/getShareData', 'WebApi@getShareData'); //获取分享数据
+//Route::get('/api/getAboutData', 'WebApi@getAboutData'); //获取关于数据
