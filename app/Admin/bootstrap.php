@@ -1,5 +1,13 @@
 <?php
+use Encore\Admin\Grid;
 
+Grid::init(function (Grid $grid) {
+
+    $grid->actions(function (Grid\Displayers\Actions $actions) {
+        $actions->disableView();
+
+    });
+});
 /**
  * Laravel-admin - admin builder based on Laravel.
  * @author z-song <https://github.com/z-song>

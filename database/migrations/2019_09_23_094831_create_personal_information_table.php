@@ -18,7 +18,7 @@ class CreatePersonalInformationTable extends Migration
             $table->string('account',64)->comment('账号');
             $table->string('password',64)->comment('密码');
             $table->string('nick_name',64)->comment('昵称');
-            $table->string('avatar',64)->comment('头像');
+            $table->string('avatar',64)->nullable()->comment('头像');
             $table->string('name',64)->comment('姓名');
             $table->tinyInteger('sex')->default(1)->comment('性别');
             $table->date('birthday')->nullable()->comment('生日');
