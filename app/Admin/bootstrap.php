@@ -4,7 +4,7 @@ use Encore\Admin\Grid;
 Grid::init(function (Grid $grid) {
 
     $grid->actions(function (Grid\Displayers\Actions $actions) {
-        $actions->disableView();
+
 
     });
 });
