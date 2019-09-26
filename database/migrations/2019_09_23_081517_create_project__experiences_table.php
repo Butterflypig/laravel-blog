@@ -13,7 +13,7 @@ class CreateProjectExperiencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('project__experiences', function (Blueprint $table) {
+        Schema::create('project_experiences', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('company_id')->comment('公司id');
             $table->string('project_name')->nullable()->comment('项目名称');

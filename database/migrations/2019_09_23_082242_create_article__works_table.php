@@ -13,7 +13,7 @@ class CreateArticleWorksTable extends Migration
      */
     public function up()
     {
-        Schema::create('article__works', function (Blueprint $table) {
+        Schema::create('article_works', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->comment('作者id');
             $table->string('title',64)->comment('标题');

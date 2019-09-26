@@ -46,8 +46,6 @@ class ResumeController extends AdminController
     {
         $show = new Show(WorkExperiences::findOrFail($id));
 
-
-
         return $show;
     }
 

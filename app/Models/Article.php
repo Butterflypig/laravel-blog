@@ -16,7 +16,6 @@ class Article extends Model
         'images',
         'video',
         'like',
-
     ];
     protected $guarded = [
 

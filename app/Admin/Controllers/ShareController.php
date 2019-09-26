@@ -45,8 +45,6 @@ class ShareController extends AdminController
     {
         $show = new Show(Article::findOrFail($id));
 
-
-
         return $show;
     }
 
@@ -62,7 +60,7 @@ class ShareController extends AdminController
         $form->text('title', '标题')->required();
         $form->textarea('content', '内容')->required();
         $form->image('images','图片')->move('/images');
-        $form->file('video','视频')->move('/video');
+        $form->file('video','视频');
 
         return $form;
     }
