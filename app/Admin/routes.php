@@ -20,4 +20,5 @@ Route::group([
     $router->resource('project', ProjectController::class);
     $router->resource('address', AddressController::class);
     $router->resource('commodity', CommodityController::class);
+    $router->resource('order', OrderController::class);
 });

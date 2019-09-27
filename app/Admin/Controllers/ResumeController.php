@@ -25,6 +25,7 @@ class ResumeController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new WorkExperiences);
+        $grid->username('company');
         $grid->column('user_id','姓名');
         $grid->column('company','公司');
         $grid->column('status','状态')->display(function ($value){

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 //引入模型
 use App\Models\Article;
-use App\Models\Setting;
+use App\Models\PersonalInformation;
 
 
 use Illuminate\Support\Facades\Input;
@@ -24,7 +24,7 @@ class WebApi extends Controller
     //获取文集数据
     public function getArticleData()
     {
-        $article = Article::query()->where('type', 'text')->get();
+        $article = Article::query()->where('type', 'article')->get();
         return $article;
     }
 
@@ -38,13 +38,13 @@ class WebApi extends Controller
     //获取关于数据
     public function getAboutData()
     {
-        $setting = Setting::query()->findOrFail(1)->toArray();
+        $setting = PersonalInformation::query()->findOrFail(1)->toArray();
         return $setting;
     }
 
     public function getLoginData()
     {
-        $setting = Setting::query()->findOrFail(1)->toArray();
+        $setting = PersonalInformation::query()->findOrFail(1)->toArray();
         return $setting;
     }
 
