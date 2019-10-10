@@ -12,7 +12,6 @@
 */
 
 Route::get('/', 'ShowProfile@index');
-Route::get('/test2', 'ShowProfile@getInitData');
 Route::get('/index', 'ShowProfile@index');
 Route::get('/about', 'ShowProfile@about');
 Route::get('/article', 'ShowProfile@article');

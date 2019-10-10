@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 //引入模型
-use App\Models\Setting;
+use App\Models\WorkExperiences;
 use App\Models\Article;
 
 use Illuminate\Support\Facades\Input;
@@ -20,12 +20,6 @@ class ShowProfile extends Controller
     public function __invoke(Request $request)
     {
         //
-    }
-
-    //获取数据
-    public function getInitData() {
-        $setting = Setting::query()->findOrFail(1)->toArray();
-        return $setting;
     }
 
     //显示首页
@@ -63,7 +57,7 @@ class ShowProfile extends Controller
 
     //显示关于
     public function about() {
-        $dataAbout = Setting::query()->get();
+        $dataAbout = WorkExperiences::query()->get();
         $menuList = [
             [
                 'id' => 1,

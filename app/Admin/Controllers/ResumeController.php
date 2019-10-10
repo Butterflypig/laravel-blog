@@ -25,7 +25,6 @@ class ResumeController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new WorkExperiences);
-        $grid->username('company');
         $grid->column('user_id','姓名');
         $grid->column('company','公司');
         $grid->column('status','状态')->display(function ($value){
@@ -63,7 +62,6 @@ class ResumeController extends AdminController
         $form->select('status', '状态')->options([0=>'在职',1=>'离职'])->required();
         $form->date('entry_time', '入职时间');
         $form->date('separation_time', '离职时间');
-
 
         return $form;
     }
